@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+
 module.exports = {
   webpack: {
     configure: (webpackConfig, { env, paths }) => {

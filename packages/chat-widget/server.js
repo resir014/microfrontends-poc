@@ -66,7 +66,7 @@ app.get('/runtime-envs.js', (req, res) => {
   res.end(response);
 });
 
-app.use(express.static(path.join(process.cwd(), 'build')));
+app.use(express.static(path.join(process.cwd(), 'dist')));
 
 app.listen(port, () => {
   console.log(`> Server running at http://localhost:${port}/`);

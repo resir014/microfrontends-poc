@@ -9,7 +9,10 @@ class App extends React.Component {
     return (
       <div className={styles.root}>
         <Header />
-        <div id="live-window" />
+        <main className={styles.main}>
+          <div id="live-window" />
+          <div id="chat-widget" />
+        </main>
       </div>
     );
   }
