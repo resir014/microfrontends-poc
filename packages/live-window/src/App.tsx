@@ -1,8 +1,11 @@
-import React from 'react';
+import * as React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends React.Component {
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    //
+  }
   render() {
     return (
       <div className="App">

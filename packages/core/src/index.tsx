@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import * as singleSpa from 'single-spa';
 
 import App from './App';
-import registerLiveWindow from './microfrontends/live-window';
+import registerLiveWindow from './loaders/live-window';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

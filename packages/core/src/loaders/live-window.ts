@@ -4,7 +4,7 @@ import runScript from '../utils/runScript';
 
 const loadReactApp = async () => {
   await runScript('http://localhost:3001/static/js/main.js');
-  return (window as any).liveWindow;
+  return (window as any).liveModule;
 };
 
 export default function registerLiveWindow() {
