@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Microfrontends POC",
   "main": "index.js",
-  "license": "UNLICENSED",
+  "license": "Unlicense",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "start:core": "yarn workspace @beegolive/core run start",
+    "start:live": "yarn workspace @beegolive/live-window run start"
+  },
   "workspaces": {
     "packages": [
       "packages/*"
