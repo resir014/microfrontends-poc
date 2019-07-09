@@ -9,12 +9,16 @@
     "@types/node": "12.0.12",
     "@types/react": "16.8.23",
     "@types/react-dom": "16.8.4",
+    "clsx": "^1.0.4",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router": "^5.0.1",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "2.1.8",
+    "reakit": "^1.0.0-beta.4",
     "single-spa-react": "^2.10.2",
     "typescript": "3.5.2"
   },
@@ -40,6 +44,9 @@
     ]
   },
   "devDependencies": {
+    "@types/history": "^4.7.2",
+    "@types/react-router": "^5.0.3",
+    "@types/react-router-dom": "^4.3.4",
     "@types/single-spa-react": "^2.8.3",
     "cross-env": "^5.2.0"
   }

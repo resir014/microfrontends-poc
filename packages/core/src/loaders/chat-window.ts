@@ -11,6 +11,6 @@ export default function registerChatWidget() {
   singleSpa.registerApplication(
     'chat-widget',
     loadVueApp,
-    matchingPathname(['/live/motorsport101', '/live', '/']),
+    matchingPathname(['/user/JimmyBroadbent']),
   );
 }

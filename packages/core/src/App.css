@@ -1,0 +1,26 @@
+.Root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.Root--withBorder {
+  border: 4px solid var(--accent);
+  min-height: calc(100vh - 8px);
+}
+
+.Root__main {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+}
+.Root__main > #live-window {
+  flex: 1 1 auto;
+  width: 100%;
+}
+.Root__main > #chat-widget {
+  flex: 1 1 350px;
+  width: 100%;
+}
+.Root__main > #chat-widget:empty {
+  display: none;
+}

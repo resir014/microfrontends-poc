@@ -1,12 +1,12 @@
 <template>
-  <div id="app">
+  <div id="chat-widget" :class="['chat-widget', hasBorder ? 'has-border' : '']">
     <img alt="Vue logo" :src="`${publicPath}/logo.png`" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Model } from 'vue-property-decorator';
 import HelloWorld from './components/HelloWorld.vue';
 
 @Component({
@@ -15,22 +15,33 @@ import HelloWorld from './components/HelloWorld.vue';
   },
 })
 export default class App extends Vue {
-  data() {
-    return {
-      publicPath: 'http://localhost:3002',
-    };
+  publicPath = 'http://localhost:3002';
+
+  hasBorder = false;
+
+  handleSetBorder(e: any) {
+    this.hasBorder = e.detail;
+  }
+
+  mounted() {
+    window.addEventListener('core:setBorder', this.handleSetBorder);
+  }
+
+  beforeDestroy() {
+    window.removeEventListener('core:setBorder', this.handleSetBorder);
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+.chat-widget {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background-color: #fff;
-  padding-top: 60px;
+  color: var(--white);
+  background-color: var(--background);
+}
+
+.has-border {
+  border: 4px solid var(--accent-green);
 }
 </style>

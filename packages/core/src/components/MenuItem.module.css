@@ -1,0 +1,16 @@
+.root {
+  margin: 0;
+}
+
+.link {
+  padding: 8px;
+  color: var(--white);
+  text-decoration: none;
+}
+.link:hover,
+.link:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.link.isActive {
+  text-decoration: underline;
+}

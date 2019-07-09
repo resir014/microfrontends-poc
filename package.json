@@ -7,7 +7,8 @@
   "private": true,
   "scripts": {
     "start:core": "yarn workspace @beegolive/core run start",
-    "start:live": "yarn workspace @beegolive/live-window run start"
+    "start:live": "yarn workspace @beegolive/live-window run start",
+    "start:chat": "yarn workspace @beegolive/chat-widget run serve"
   },
   "workspaces": {
     "packages": [
@@ -34,7 +35,6 @@
     "prettier": "^1.18.2"
   },
   "resolutions": {
-    "babel-eslint": "9.0.0",
     "webpack": "4.28.3"
   }
 }

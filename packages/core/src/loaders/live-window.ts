@@ -11,6 +11,6 @@ export default function registerLiveWindow() {
   singleSpa.registerApplication(
     'live-window',
     loadReactApp,
-    matchingPathname(['/live/motorsport101', '/live', '/']),
+    matchingPathname(['/user/JimmyBroadbent', '/live', '/about', '/']),
   );
 }

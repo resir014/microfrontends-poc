@@ -1,28 +1,53 @@
 import * as React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import clsx from 'clsx';
+import { BrowserRouter, Route } from 'react-router-dom';
 
-class App extends React.Component {
-  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    //
+import styles from './App.module.css';
+
+import HomePage from './pages/home';
+import AboutPage from './pages/about';
+import UserPage from './pages/user';
+
+interface AppState {
+  isMFBorderVisible: boolean;
+}
+
+class App extends React.Component<{}, AppState> {
+  public constructor(props: {}) {
+    super(props);
+
+    this.state = {
+      isMFBorderVisible: false,
+    };
   }
-  render() {
+
+  public componentDidMount() {
+    window.addEventListener('core:setBorder', this.handleSetBorder);
+  }
+
+  public componentWillUnmount() {
+    window.removeEventListener('core:setBorder', this.handleSetBorder);
+  }
+
+  private handleSetBorder = (e: any) => {
+    console.log('event?', e.detail);
+    this.setState({ isMFBorderVisible: e.detail });
+  };
+
+  public componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    console.error(error);
+  }
+
+  public render() {
+    const { isMFBorderVisible } = this.state;
+
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={`http://localhost:3001${logo}`} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.tsx</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div className={clsx(styles.appWrapper, isMFBorderVisible && styles.hasMFBorder)}>
+        <BrowserRouter>
+          <Route path="/" exact component={HomePage} />
+          <Route path="/about" component={AboutPage} />
+          <Route path="/user/:username" component={UserPage} />
+        </BrowserRouter>
       </div>
     );
   }

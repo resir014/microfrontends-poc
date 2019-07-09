@@ -1,0 +1,65 @@
+.dialog {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background-color: rgba(33, 33, 33);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 12vmin;
+  left: 50%;
+  width: 100%;
+  max-width: 560px;
+  transform: translateX(-50%);
+  height: 100%;
+  max-height: calc(100vh - 33%);
+  color: #fff;
+  z-index: 999;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  outline: 0px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgba(33, 33, 33, 0.25);
+  border-image: initial;
+}
+
+.overlay {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  z-index: 999;
+}
+
+.modalHeader {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+.modalHeader h3 {
+  margin: 0;
+}
+
+.modalContent {
+  padding: 16px;
+  flex: 1;
+}
+.modalContent p {
+  font-size: 16px;
+  line-height: 21px;
+  margin: 0 0 1rem;
+}
+
+.modalFooter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
