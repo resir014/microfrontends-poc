@@ -2,36 +2,15 @@
 
 > Microfrontends POC made for Microservice JKT Meetup #3 (18 July 2019)
 
-Finally, an answer to the question "should I use React or Vue?" - why not use both at the same time!
+This is sample code material for the talk I gave on the third Microservice JKT meetup on microfrontends. Yeah, I know.
 
-## What the heck?
+## Slides
 
-Okay, serious. This app exists to demonstrate the powers of [microfrontends](https://micro-frontends.org). Microfrontends is a fairly new paradigm of applying the microservices architecture to the frontend. It allows for multiple UI modules to be combined to one single cohesive experience, allowing for independent development/deployment, and opening the doors for technological agnosticism.
+The slides can be viewed [here]().
 
-## How do I run this.
+## What's inside
 
-You will need at least three terminal tabs.
+This project contains two examples:
 
-This application consists of three different UI modules:
-
-- Live window: localhost:3000
-- Chat (with notification): localhost:3001
-- Subscription: localhost:3002
-
-```bash
-# Install dependencies (yarn is required because we use Yarn workspaces)
-yarn
-
-# Terminal tab 1
-yarn start:live
-# Terminal tab 2
-yarn start:chat
-# Terminal tab 3
-yarn start:core
-
-# Open your browser at port 3000
-```
-
-## License
-
-Public Domain: https://unlicense.org/
+- [Example #1](with-proxy) - Reverse proxy with Next.js + micro-proxy
+- [Example #2](with-single-spa) - Component-based microfrontends, with single-spa

@@ -1,0 +1,15 @@
+{
+  "name": "with-proxy",
+  "version": "1.0.0",
+  "description": "Microfrontends POC",
+  "main": "N/A",
+  "author": "Resi Respati <resir014@gmail.com>",
+  "license": "Unlicense",
+  "private": true,
+  "scripts": {
+    "start": "micro-proxy -r rules.json -p 9000"
+  },
+  "dependencies": {
+    "micro-proxy": "^1.1.0"
+  }
+}
