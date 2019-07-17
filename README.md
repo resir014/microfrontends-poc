@@ -6,7 +6,7 @@ This is sample code material for the talk I gave on the third Microservice JKT m
 
 ## Slides
 
-The slides can be viewed [here]().
+The slides can be viewed [here](https://docs.google.com/presentation/d/1TLsbDNewVPcd28UwE3CIa073bHbFwuOniLf34ySd29Y/edit?usp=sharing).
 
 ## What's inside
 
