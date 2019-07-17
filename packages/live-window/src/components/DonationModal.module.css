@@ -1,3 +1,17 @@
+.disclosureButton {
+  margin: 0;
+  background: none;
+  border: none;
+  border-radius: 2px;
+  font-size: 1rem;
+  color: var(--white);
+  cursor: pointer;
+}
+.disclosureButton:hover,
+.disclosureButton:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
 .dialog {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica,
@@ -62,4 +76,53 @@
   justify-content: flex-end;
   padding: 16px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cancelButton {
+  margin: 0;
+  margin-right: 8px;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 4;
+  color: var(--white);
+  background-color: var(--background-lighter);
+  cursor: pointer;
+}
+.cancelButton:hover,
+.cancelButton:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.donateButton {
+  margin: 0;
+  margin-right: 8px;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 4;
+  color: var(--background);
+  background-color: var(--accent);
+  cursor: pointer;
+}
+.donateButton:hover,
+.donateButton:focus {
+  background-color: var(--accent);
+}
+
+.formControl {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.formControl .label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.formControl .numeric {
+  height: 40px;
+  font-size: 24px;
+}
+
+.formControl .input {
+  width: 100%;
 }

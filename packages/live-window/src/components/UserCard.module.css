@@ -1,0 +1,43 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  color: inherit;
+  background-color: var(--background-lighter);
+  border-radius: 8px;
+  box-shadow: var(--shadow-small);
+  overflow: hidden;
+  text-decoration: none;
+}
+.root:hover,
+.root:focus {
+  text-decoration: none;
+}
+
+.avatarWrapper {
+  position: relative;
+  height: calc(100% - 50px);
+}
+
+.avatar {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.usernameWrapper {
+  padding: 16px;
+}
+
+.username {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 700;
+}
+.root:hover .username,
+.root:focus .username {
+  color: var(--accent);
+  text-decoration: none;
+}

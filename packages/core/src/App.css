@@ -12,6 +12,7 @@
   display: flex;
   flex-direction: row;
   flex: 1 1 auto;
+  max-height: calc(100vh - var(--height-header));
 }
 .Root__main > #live-window {
   flex: 1 1 auto;

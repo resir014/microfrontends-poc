@@ -1,8 +1,15 @@
 import * as React from 'react';
 import clsx from 'clsx';
 
-import logo from '../assets/logo.svg';
 import styles from './home.module.css';
+import Page from '../components/Page';
+import UserCard from '../components/UserCard';
+import UserCardGrid from '../components/UserCardGrid';
+
+import jimmer from '../assets/jimmer.jpg';
+import m101 from '../assets/m101.jpg';
+import lgr from '../assets/lgr.jpg';
+import tomscott from '../assets/tomscott.png';
 
 function HomePage() {
   const [hasBorder, setHasBorder] = React.useState(false);
@@ -21,20 +28,35 @@ function HomePage() {
 
   return (
     <div className={clsx(styles.root, hasBorder && styles.hasBorder)}>
-      <header className={styles.header}>
-        <img src={`http://localhost:3001${logo}`} className={styles.logo} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className={styles.link}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Page>
+        <h2>Live right now</h2>
+        <UserCardGrid>
+          <UserCard
+            href="/user/JimmyBroadbent"
+            username="JimmyBroadbent"
+            avatar={`http://localhost:3001${jimmer}`}
+          />
+        </UserCardGrid>
+
+        <h2>Users you follow</h2>
+        <UserCardGrid>
+          <UserCard
+            href="/user/JimmyBroadbent"
+            username="Motorsport101"
+            avatar={`http://localhost:3001${m101}`}
+          />
+          <UserCard
+            href="/user/JimmyBroadbent"
+            username="LetsGoRacing"
+            avatar={`http://localhost:3001${lgr}`}
+          />
+          <UserCard
+            href="/user/JimmyBroadbent"
+            username="tomscott"
+            avatar={`http://localhost:3001${tomscott}`}
+          />
+        </UserCardGrid>
+      </Page>
     </div>
   );
 }

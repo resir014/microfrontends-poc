@@ -1,17 +1,19 @@
 <template>
   <div id="chat-widget" :class="['chat-widget', hasBorder ? 'has-border' : '']">
-    <img alt="Vue logo" :src="`${publicPath}/logo.png`" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <MessageList />
+    <MessageBox />
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue, Model } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
+import MessageList from './components/MessageList.vue';
+import MessageBox from './components/MessageBox.vue';
 
 @Component({
   components: {
-    HelloWorld,
+    MessageList,
+    MessageBox,
   },
 })
 export default class App extends Vue {
@@ -35,10 +37,12 @@ export default class App extends Vue {
 
 <style>
 .chat-widget {
+  display: flex;
+  flex-direction: column;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: var(--white);
-  background-color: var(--background);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .has-border {

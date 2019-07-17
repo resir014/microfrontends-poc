@@ -1,0 +1,8 @@
+.root {
+  flex: 1;
+  padding: 16px;
+}
+.root a {
+  color: var(--accent);
+  text-decoration: none;
+}

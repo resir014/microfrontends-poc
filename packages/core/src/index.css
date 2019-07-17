@@ -7,12 +7,13 @@
   --white: #fff;
   --black: #000;
   --background: #282c34;
+  --background-lighter: #373940;
   --accent: #61dafb;
   --accent-green: #42b983;
 
-  --shadow-small: 0 0 0 1px #333;
-  --shadow-medium: 0 0 0 1px #333;
-  --shadow-large: 0 0 0 1px #333;
+  --shadow-small: 0 5px 10px rgba(0, 0, 0, 0.12);
+  --shadow-medium: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --shadow-large: 0 30px 60px rgba(0, 0, 0, 0.12);
 
   --height-header: 60px;
 }
