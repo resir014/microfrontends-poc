@@ -27,6 +27,7 @@ export default () => (
     <style jsx>{`
       .title {
         margin-top: 0;
+        font-size: 2rem;
       }
     `}</style>
   </Page>
