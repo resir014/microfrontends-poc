@@ -7,7 +7,24 @@
   "license": "Unlicense",
   "private": true,
   "scripts": {
-    "start": "micro-proxy -r rules.json -p 9000"
+    "build": "yarn build:blog && yarn build:home",
+    "build:blog": "yarn workspace @microfrontends-poc/blog run build",
+    "build:home": "yarn workspace @microfrontends-poc/home run build",
+    "start": "micro-proxy -r rules.json -p 9000",
+    "start:blog": "yarn workspace @microfrontends-poc/blog run start",
+    "start:home": "yarn workspace @microfrontends-poc/home run start"
+  },
+  "workspaces": {
+    "packages": [
+      "home",
+      "blog"
+    ],
+    "nohoist": [
+      "**/next",
+      "**/next-server",
+      "**/react",
+      "**/react-dom"
+    ]
   },
   "dependencies": {
     "micro-proxy": "^1.1.0"

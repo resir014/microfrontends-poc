@@ -1,7 +1,7 @@
 {
-  "name": "nextjs-typescript-quickstart",
+  "name": "@microfrontends-poc/blog",
   "version": "1.0.0",
-  "description": "Get started on Next.js with TypeScript in seconds.",
+  "description": "Blog module for micro-proxy.",
   "main": "N/A",
   "repository": "https://github.com/resir014/nextjs-typescript-quickstart",
   "author": "Resi Respati <resir014@gmail.com>",
