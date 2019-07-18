@@ -14,9 +14,9 @@ You will need at least three terminal tabs.
 
 This application consists of three different UI modules:
 
-- Live window: localhost:3000
+- Application shell: localhost:3000
 - Chat (with notification): localhost:3001
-- Subscription: localhost:3002
+- Live window: localhost:3002
 
 ```bash
 # Install dependencies (yarn is required because we use Yarn workspaces)

@@ -8,6 +8,12 @@ This demonstrates the power of microfrontends by way of reverse proxying routes 
 
 You will need at least three terminal tabs.
 
+This application consists of three different UI modules:
+
+- Proxy: localhost:9000
+- Homepage: localhost:4000
+- Blog: localhost:5000
+
 ```bash
 # Install dependencies (yarn is required because we use Yarn workspaces)
 yarn
